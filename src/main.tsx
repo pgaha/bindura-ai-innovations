@@ -1,10 +1,10 @@
 import { createRoot } from "react-dom/client";
-import { HashRouter } from "react-router-dom";
-import App from "./App.tsx";
+import { BrowserRouter } from "react-router-dom";
+import App from "./App";
 import "./index.css";
 
 createRoot(document.getElementById("root")!).render(
-  <HashRouter>
+  <BrowserRouter basename="/bindura-ai-innovations">
     <App />
-  </HashRouter>
+  </BrowserRouter>
 );
