@@ -74,7 +74,7 @@ Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/c
 
 
 git add .
-git commit -m "Updating index.html"
+git commit -m "Updating App.tsx"
 git push
 npm run build
 npm run deploy
