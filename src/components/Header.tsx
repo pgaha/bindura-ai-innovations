@@ -5,6 +5,7 @@ import { Button } from "@/components/ui/button";
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const baseUrl = import.meta.env.BASE_URL;
 
   useEffect(() => {
     const handleScroll = () => {
@@ -32,10 +33,22 @@ const Header = () => {
       <div className="container mx-auto px-4 flex items-center justify-between">
         {/* Logo */}
         <a href="#" className="flex items-center gap-3">
-          <img src="/buselog.png" alt="CAEIT Logo" className="w-10 h-10" />
-          <div className={`hidden sm:block transition-colors ${isScrolled ? "text-foreground" : "text-primary-foreground"}`}>
-            <p className="font-serif font-semibold text-sm leading-tight">Centre for AI &</p>
-            <p className="font-serif font-semibold text-sm leading-tight">Emerging Technologies</p>
+          <img
+            src={`${baseUrl}buselog.png`}
+            alt="CAEIT Logo"
+            className="w-10 h-10"
+          />
+          <div
+            className={`hidden sm:block transition-colors ${
+              isScrolled ? "text-foreground" : "text-primary-foreground"
+            }`}
+          >
+            <p className="font-serif font-semibold text-sm leading-tight">
+              Centre for AI &
+            </p>
+            <p className="font-serif font-semibold text-sm leading-tight">
+              Emerging Technologies
+            </p>
           </div>
         </a>
 
@@ -63,9 +76,17 @@ const Header = () => {
           onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
         >
           {isMobileMenuOpen ? (
-            <X className={`w-6 h-6 ${isScrolled ? "text-foreground" : "text-primary-foreground"}`} />
+            <X
+              className={`w-6 h-6 ${
+                isScrolled ? "text-foreground" : "text-primary-foreground"
+              }`}
+            />
           ) : (
-            <Menu className={`w-6 h-6 ${isScrolled ? "text-foreground" : "text-primary-foreground"}`} />
+            <Menu
+              className={`w-6 h-6 ${
+                isScrolled ? "text-foreground" : "text-primary-foreground"
+              }`}
+            />
           )}
         </button>
       </div>
