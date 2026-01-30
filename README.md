@@ -74,7 +74,7 @@ Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/c
 
 
 git add .
-git commit -m "Your message"
+git commit -m "Updating index.html"
 git push
 npm run build
 npm run deploy
