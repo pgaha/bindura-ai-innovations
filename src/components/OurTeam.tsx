@@ -34,7 +34,7 @@ const team = [
   },
   {
     name: "Panashe Siziba",
-    title: "AI Officer",
+    title: "Automation Engineer",
     img: Panashe,
   },
   {
